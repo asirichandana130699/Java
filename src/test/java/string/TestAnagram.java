@@ -7,7 +7,7 @@ public class TestAnagram {
     @Test
     public void testStringAnagrams() {
         Anagram anagrams = new Anagram();
-        boolean isAnagram = anagrams.areAnagrams("siva", "avis");
+        boolean isAnagram = anagrams.areAnagrams("siri", "iris");
         Assert.assertTrue(isAnagram);
     }
 
@@ -15,7 +15,7 @@ public class TestAnagram {
     @Test
     public void testStringAnagrams_Failure() {
         Anagram anagrams = new Anagram();
-        boolean isAnagram = anagrams.areAnagrams("shiva", "sivas");
+        boolean isAnagram = anagrams.areAnagrams("siri", "irisa");
         Assert.assertFalse(isAnagram);
     }
 }
