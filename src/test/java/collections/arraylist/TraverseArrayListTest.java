@@ -1,5 +1,6 @@
-package collections;
+package collections.arraylist;
 
+import collections.arraylist.TraverseArrayList;
 import org.junit.Assert;
 import org.junit.Test;
 

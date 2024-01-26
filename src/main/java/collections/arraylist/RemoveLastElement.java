@@ -1,4 +1,4 @@
-package collections;
+package collections.arraylist;
 
 import java.util.ArrayList;
 
@@ -8,6 +8,8 @@ public class RemoveLastElement {
         if (!list.isEmpty()) {
             list.remove(list.size() - 1);
         }
+
         return list;
+
     }
 }

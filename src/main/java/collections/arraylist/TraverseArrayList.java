@@ -1,4 +1,4 @@
-package collections;
+package collections.arraylist;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +17,7 @@ public class TraverseArrayList {
         for(String name : employeeList) {
             outputList.add(name);
         }
-        return outputList;
+        return outputList;///index mention no
     }
 }
 

@@ -1,10 +1,10 @@
-package collections;
+package collections.arraylist;
 
+import collections.arraylist.ArrayListToArray;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ArrayListToArrayTest {
     ArrayListToArray arrayListToArray = new ArrayListToArray();

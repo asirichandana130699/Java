@@ -1,4 +1,6 @@
-package collections;
+package collections.arraylist;
+
+import collections.Student;
 
 import java.util.ArrayList;
 

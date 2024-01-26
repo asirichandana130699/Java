@@ -1,5 +1,7 @@
-package collections;
+package collections.arraylist;
 
+import collections.Student;
+import collections.arraylist.FilterStudentsByGPA;
 import org.junit.Assert;
 import org.junit.Test;
 

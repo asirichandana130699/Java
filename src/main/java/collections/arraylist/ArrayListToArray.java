@@ -1,4 +1,4 @@
-package collections;
+package collections.arraylist;
 
 import java.util.ArrayList;
 
@@ -8,5 +8,4 @@ public class ArrayListToArray {
         // Converting ArrayList to an Array
         return stringArrayList.toArray(new String[0]);
     }
-
 }
