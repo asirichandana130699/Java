@@ -8,5 +8,4 @@ public class ArrayListToArray {
         // Converting ArrayList to an Array
         return stringArrayList.toArray(new String[0]);
     }
-
 }

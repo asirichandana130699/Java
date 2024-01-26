@@ -8,6 +8,8 @@ public class RemoveLastElement {
         if (!list.isEmpty()) {
             list.remove(list.size() - 1);
         }
+
         return list;
+
     }
 }
