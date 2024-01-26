@@ -4,7 +4,7 @@ package collections.hashmap;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class ArraySumTest {
+public class ArraySumTest { 
     ArraysSum arraysSum = new ArraysSum();
     @Test
     public void testGetSum() {

@@ -5,7 +5,7 @@ class Student {
     private String lastName;
     private double gpa;
 
-    // Constructor
+    // Constructor 
     public Student(String firstName, String lastName, double gpa) {
         this.firstName = firstName;
         this.lastName = lastName;
