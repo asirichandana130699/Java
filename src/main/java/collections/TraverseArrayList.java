@@ -17,7 +17,7 @@ public class TraverseArrayList {
         for(String name : employeeList) {
             outputList.add(name);
         }
-        return outputList;///index mention no
+        return outputList;
     }
 }
 

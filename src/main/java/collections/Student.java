@@ -1,6 +1,6 @@
 package collections;
 
-public class Student {
+class Student {
     private String firstName;
     private String lastName;
     private double gpa;
