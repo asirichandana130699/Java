@@ -1,4 +1,4 @@
-package thread;
+package threads;
 
 public class Singleton {
     private static Singleton instance;
