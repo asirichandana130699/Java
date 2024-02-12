@@ -1,6 +1,6 @@
 package threads;
 
-public class Singleton {
+public class Singleton{
     private static Singleton instance;
     private String data;
     private Singleton(String data) {
