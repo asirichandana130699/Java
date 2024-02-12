@@ -1,63 +1,34 @@
-package threads;
-
-import java.util.ArrayList;
-import java.util.List;
+package Threads;
 
 public class OddEvenPrinter {
-    private boolean odd = true;
 
-    public List<Integer> getEvenOdd(int number) {
-        // A shared list to store numbers.
-        List<Integer> list = new ArrayList<>();
+    public void printOddEvenNumbers() {
+        // Creating two threads
+        Thread evenThread = new Thread(new EvenPrinter());
+        Thread oddThread = new Thread(new OddPrinter());
 
-        // Thread for adding odd numbers to the list.
-        Thread oddThread = new Thread(() -> {
-            for (int i = 1; i <= number; i += 2) {
-                synchronized (this) {
-                    if (!odd) {
-                        try {
-                            wait();
-                        } catch (InterruptedException e) {
-                            throw new RuntimeException(e);
-                        }
-                    }
-                    list.add(i);
-                    odd = false;
-                    notifyAll();
-                }
-            }
-        });
-
-        // Thread for adding even numbers to the list.
-        Thread evenThread = new Thread(() -> {
-            for (int i = 2; i <= number; i += 2) {
-                synchronized (this) {
-                    if (odd) {
-                        try {
-                            wait();
-                        } catch (InterruptedException e) {
-                            throw new RuntimeException(e);
-                        }
-                    }
-                    list.add(i);
-                    odd = true;
-                    notifyAll();
-                }
-            }
-        });
-
-        oddThread.start();
+        // Starting the threads
         evenThread.start();
-
-        try {
-            oddThread.join();
-            evenThread.join();
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-
-        return list;
+        oddThread.start();
     }
+}
 
+class EvenPrinter implements Runnable {
 
+    @Override
+    public void run() {
+        for (int i = 2; i <= 60; i += 2) {
+            System.out.println("Even: " + i);
+        }
+    }
+}
+
+class OddPrinter implements Runnable {
+
+    @Override
+    public void run() {
+        for (int i = 1; i <= 59; i += 2) {
+            System.out.println("Odd: " + i);
+        }
+    }
 }

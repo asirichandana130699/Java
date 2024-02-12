@@ -1,18 +1,23 @@
-package threads;
+package Threads;
 
 public class Singleton {
     private static Singleton instance;
-    private String data;
-    private Singleton(String data) {
-        this.data = data;
+
+    // Private constructor to prevent instantiation from outside
+    private Singleton() {
     }
-    public static Singleton getInstance(String data) {
-        if(instance == null) {
-            instance = new Singleton(data);
+
+    // Static method to get the singleton instance
+    public static Singleton getInstance() {
+        // Lazy initialization - create the instance only when needed
+        if (instance == null) {
+            instance = new Singleton();
         }
         return instance;
     }
-    public String getData() {
-        return data;
+
+    // Method to perform some operation
+    public void performOperation() {
+        System.out.println("Singleton instance is performing an operation.");
     }
 }
